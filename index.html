@@ -1,0 +1,43 @@
+---
+layout: default
+title: Home
+---
+<main id="main" class="site-main">
+
+{% if page.url == "/" %}
+<div class="hero">
+    <h1 class="hero-text">{{ site.author.greetings }}</h1>
+    {% if site.home_page_description %}
+    <p class="hero-description">{{ site.home_page_description }}</p>
+    {% endif %}
+</div>
+{% endif %}
+
+{% if page.url == "/" %}
+<!-- Featured-->
+<div id="featured-posts" class="featured-posts">
+    {% for post in site.posts %}
+    {% if post.featured == true %}
+    {% include featuredbox.html %}
+    {% endif %}
+    {% endfor %}
+</div>
+
+{% endif%}
+
+<!-- Posts Index -->
+<div class="post-feed">
+    {% if page.url == "/" %}
+    <div class="post-feed-title">Latest Articles</div>
+    {% endif %}
+    <div class="post-feed">
+        {% for post in paginator.posts %}
+            {% include postbox.html %}
+        {% endfor %}
+    </div>
+</div>
+<!-- Pagination-->
+{% include pagination.html %}
+</main>
+
+

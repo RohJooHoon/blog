@@ -1,0 +1,72 @@
+# jekyll start : bundle exec jekyll serve
+# jekyll build : jekyll build
+
+# Site setings
+name: 'JooHoon'
+description: 'Web Front Developer'
+meta_description: 'Web Front Developer blog'
+logo:
+# Author image is used in site sidebar and greetings in the home page hero text
+author:
+  image: 'profile.jpg'
+  greetings: 'Home'
+favicon: 'assets/images/favicon.ico'
+baseurl: ''
+production_url: https://rohjoohoon.github.io/
+disqus: 'rohjoohoon-github-io'
+mailchimp_url: ''
+# Add your GA Tracking Id
+ga_analytics: 
+
+# Contact form setings
+email: joohoon.roh@gmail.com
+home_page_description: "프론트엔드 기술 블로그"
+contact_page_description: "프론트엔드 개발자 노주훈 입니다.<br>웹 퍼블리싱 및 웹 프론트 관련 비즈니스 문의는 아래 폼으로 연락주시면 확인 후 답변드리겠습니다."
+thankyou_page_description: "메세지가 성공적으로 보내졌습니다. 곧 연락 드리겠습니다!"
+
+# Social links
+#twitter: 'username'
+#facebook: 'username'
+github: 'RohJooHoon'
+#codepen: 'username'
+#dribbble: 'username'
+#medium: '@username'
+instagram: 'picfox93'
+#pinterest: 'username'
+#linkedin: 'username'
+#producthunt: '@username'
+#quora: 'username'
+
+# Navigation
+navigation:
+  - text: Home
+    url: /
+  - text: About
+    url: /about
+  - text: Contact
+    url: /contact
+#  - text: Search
+#    url: /search
+#  - text: Style Guide
+#    url: /style-guide
+
+# Required Plugins
+plugins_dir:
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Pagination
+paginate: 5
+paginate_path: /page:num/
+
+# Permalinks
+permalink: /:title
+
+# Other
+markdown: kramdown
+
+# Sass
+sass:
+  sass_dir: _sass
+  style: compressed
